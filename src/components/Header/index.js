@@ -7,9 +7,6 @@ export const Header = () =>{
         <header className={styles.Header__Container}>
             <Logo/>
             <div>
-                buscador
-            </div>
-            <div>
                 generar entrada
             </div>
         </header>

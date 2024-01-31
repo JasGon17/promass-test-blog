@@ -1,0 +1,21 @@
+.Blogs__Container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 16px;
+}
+.Blogs__TitleCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+.Blogs__Title{
+    font-size: 32px;
+    color: var(--color-primary);
+}
+.Blogs__CardBlogContainer{
+    display: flex;
+    width: 100%;
+}
