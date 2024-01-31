@@ -9,3 +9,26 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+:root{
+  --color-black: #2d2d29;
+  --color-white: #dfece6;
+  --color-primary: #215a6d;
+  --color-secondary: #3ca2a2;
+}
+/* Template media query
+@media only screen and (min-width: 768px){
+
+}
+@media only screen and (min-width: 1024px){
+
+}
+@media only screen and (min-width: 1280px){
+
+}
+@media only screen and (min-width: 1440px){
+
+}
+@media only screen and (min-width: 2560px){
+
+}
+*/
