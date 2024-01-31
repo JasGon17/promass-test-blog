@@ -14,6 +14,7 @@ body {
   --color-white: #dfece6;
   --color-primary: #215a6d;
   --color-secondary: #3ca2a2;
+  --color-third: #ca917e;
 }
 /* Template media query
 @media only screen and (min-width: 768px){
