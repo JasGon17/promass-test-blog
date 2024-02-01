@@ -1,0 +1,53 @@
+.Footer__Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    background: var(--color-white);
+    min-height: 100px;
+    padding: 32px 16px 16px 16px;
+}
+.Footer__BodyCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+.Footer__ContactSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Footer__ContactTitle{
+    color: var(--color-primary);
+    font-weight: 600;
+}
+.Footer__LinkStyle{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+.Footer__LinkStyle:hover{
+    text-decoration: underline;
+}
+
+.Footer__CopyRight{
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 768px){
+    .Footer__Container{
+        gap: 32px;
+    }
+    .Footer__BodyCont{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;  
+    }
+}

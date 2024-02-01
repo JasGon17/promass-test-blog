@@ -5,13 +5,14 @@ export const getDataBlog = async () => {
       const response = await fetch(url, { cache: 'no-store' });
   
       if (!response.ok) {
-        throw new Error('Hubo un problema al realizar la solicitud: ' + response.status);
+        return 400
       }
-  
+
       const data = await response.json();
       return data
+
     } catch (error) {
-      console.error('Hubo un problema con la solicitud Fetch:', error);
+      return 400
     }
 };
 
