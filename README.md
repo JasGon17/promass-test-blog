@@ -79,3 +79,5 @@ gestión de dependencias, uso de librerías de terceros, etc.
     ● Calidad del código.
     ● Tiempo en desarrollo.
 El código fuente de la aplicación de React y el servicio web deberás de compartirlo con sus instrucciones de instalación para poderlo revisar en nuestros equipos de manera local.
+
+urlDeploy: https://miblog-test-promass.netlify.app/
