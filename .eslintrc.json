@@ -5,8 +5,10 @@
         "node": true
     },
     "extends": [
-        "standard",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "standard"
+    ],
+    "overrides": [
     ],
     "parserOptions": {
         "ecmaVersion": "latest",

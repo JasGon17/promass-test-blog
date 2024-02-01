@@ -4,7 +4,7 @@ import { Logo } from '../Logo'
 import styles from './Footer.module.css'
 
 export const Footer = () => {
-    return(
+  return (
         <footer className={styles.Footer__Container}>
             <div className={styles.Footer__BodyCont}>
                 <Logo/>
@@ -12,13 +12,13 @@ export const Footer = () => {
                     <p className={styles.Footer__ContactTitle}>
                         Contacto:
                     </p>
-                    <Link 
+                    <Link
                     className={styles.Footer__LinkStyle}
                     href='mailto:jacnto.gonzalez@gmail.com'>
                         jacnto.gonzalez@gmail.com
                     </Link>
                 </div>
-                <Link 
+                <Link
                     className={styles.Footer__LinkStyle}
                     target='_blank'
                     href='https://jacintogonzalez.dev/'>
@@ -29,5 +29,5 @@ export const Footer = () => {
                 © 2024 All rights reserved by MiBlog.
             </p>
         </footer>
-    )
+  )
 }

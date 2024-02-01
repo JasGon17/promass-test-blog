@@ -2,8 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import styles from './Presentation.module.css'
 
-export const Presentation = () =>{
-    return(
+export const Presentation = () => {
+  return (
         <section className={styles.Presentation__Container}>
             <div className={styles.Presentation__ContImage}>
                 <Image className={styles.Presentation__Image} src='./static/blog-img.svg' width={2000} height={2000} alt={'blog-img'}/>
@@ -32,5 +32,5 @@ export const Presentation = () =>{
                     </p>
                 </div>
         </section>
-    )
+  )
 }
