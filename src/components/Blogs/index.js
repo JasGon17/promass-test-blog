@@ -1,5 +1,7 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { CardBlog } from '../CardBlog'
+import { SearchBar } from '../SearchBar'
 import styles from './Blogs.module.css'
 
 const dataBlogs = [
@@ -30,17 +32,23 @@ const dataBlogs = [
 ]
 
 export const Blogs = () =>{
+    const [dataBlog, setDataBlog] = useState(dataBlogs)
+
+    const handleListBlog = (data) => {
+        setDataBlog(data)
+    }
+
     return(
         <section className={styles.Blogs__Container}>
             <div className={styles.Blogs__TitleCont}>
                 <h2 className={styles.Blogs__Title}>
                     Mis Artículos
                 </h2>
-                <div>buscador</div>
+                <SearchBar dataBlogs={dataBlogs} handleListBlog={handleListBlog}/>
             </div>
-            {dataBlogs.length > 0 ?
+            {dataBlog.length > 0 ?
                 <div className={styles.Blogs__CardBlogContainer}>
-                    {dataBlogs.map((item, key)=>{
+                    {dataBlog.map((item, key)=>{
                         return<CardBlog
                         title={item.title}
                         author={item.author}
@@ -53,7 +61,7 @@ export const Blogs = () =>{
             :
             <div className={styles.Blogs__ContDefaultText}>
                 <p className={styles.Blogs__DefaultText}>
-                    Aún no hay ninguna publicación
+                    No se encontraron publicaciones
                 </p>
             </div>
             }
