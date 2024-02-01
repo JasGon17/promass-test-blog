@@ -1,0 +1,83 @@
+.AddEntryModalForm__Container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.AddEntryModalForm__Label{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--color-white);
+}
+.AddEntryModalForm__ParContInput{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.AddEntryModalForm__ContInput{
+    position: relative;
+    width: 100%;
+}
+.AddEntryModalForm__Input{
+    height: 48px;
+    color: var(--color-primary);
+    font-size: 16px;
+    padding: 0px 16px;
+    width: 100%;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+}
+.AddEntryModalForm__InputTextArea{
+    height: 48px;
+    color: var(--color-primary);
+    font-size: 16px;
+    padding: 16px;
+    width: 100%;
+    min-height: 150px;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+}
+.AddEntryModalForm__ContButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.AddEntryModalForm__ButtonSubmit{
+    width: 100%;
+    height: 48px;
+    max-width: 250px;
+    border: none;
+    border-radius: 16px;
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.AddEntryModalForm__ErrorMessage{
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+    color: var(--color-error);
+    font-weight: 600;
+    font-size: 14px;
+}
+.AddEntryModalForm__DateCont{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+.TextDate{
+    color: var(--color-white);
+}
+@media only screen and (min-width: 768px){
+    .AddEntryModalForm__ParContInput{
+        flex-direction: row;
+        gap: 16px;
+    }
+}

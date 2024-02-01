@@ -1,0 +1,46 @@
+.AddEntryModal__Container{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+    z-index: 6;
+    padding: 32px 16px;
+}
+.AddEntryModal__ContainerOff{
+    display: none;
+}
+.AddEntryModal__FormOff{
+    display: none;
+}
+.AddEntryModal__Form{
+    position: relative;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding: 32px 16px;
+    background: var(--color-primary);
+}
+.AddEntryModal__TitleForm{
+    color: var(--color-white);
+    text-align: center;
+}
+.AddEntryModal__CloseModal{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    min-width: 48px;
+    min-height: 48px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: var(--color-white);
+    cursor: pointer;
+}

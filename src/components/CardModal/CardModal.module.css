@@ -1,0 +1,47 @@
+.CardModal__Container{
+    height: 350px;
+    width: 100%;
+    background: var(--color-primary);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 0px 8px;
+}
+.CardModal__ContainerOff{
+    display: none;
+}
+.CardModal__IconModal{
+    font-size: 84px;
+    color: var(--color-white);
+}
+.CardModal__TextModal{
+    font-size: 18px;
+    color: var(--color-white);
+    text-align: center;
+}
+.CardModal__Button{
+    width: 250px;
+    height: 48px;
+    background: var(--color-white);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 12px;
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: 600;
+}
+@media only screen and (min-width: 768px){
+    .CardModal__TextModal{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .CardModal__Container{
+        width: 60%;
+    }
+}

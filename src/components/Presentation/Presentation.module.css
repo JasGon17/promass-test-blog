@@ -1,0 +1,51 @@
+.Presentation__Container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 32px 0px;
+    overflow: hidden;
+}
+.Presentation__ContImage{
+    position: absolute;
+    width: 100%;
+}
+.Presentation__Image{
+    object-fit: cover;
+    opacity: .4;
+    width: 100%;
+    height: auto;
+}
+.Presentation__TextCont{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 16px;
+    gap: 8px;
+}
+.Presentation__Text{
+    line-height: 110%;
+    color: var(--color-black);
+}
+.Presentation__TextTitle{
+    color: var(--color-primary);
+}
+@media only screen and (min-width: 1024px){
+    .Presentation__Container{
+        min-height: calc(100vh - 60px);
+        padding-top: 0px;
+    }
+    .Presentation__ContImage{
+        position: relative;    
+    }
+    .Presentation__Image{
+        opacity: 1;
+        width: auto;
+        height: 100%;
+    }
+    .Presentation__TextCont{
+        padding: 0px 32px;
+    }
+}
