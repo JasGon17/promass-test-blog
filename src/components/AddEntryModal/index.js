@@ -8,15 +8,15 @@ import { AddEntryModalForm } from '../AddEntryModalForm';
 
 export const AddEntryModal = ({display, handleCloseModal}) =>{
     const [isResetForm, setIsResetForm] = useState(false)
+    
     useEffect(() => {
         if (display) {
-          document.body.style.overflow = 'hidden'
-          document.body.style.height = '100vh'
+          document.body.style.overflowY = 'hidden'
         } else {
-          document.body.style.overflow = 'scroll'
-          document.body.style.height = 'auto'
+          document.body.style.overflowY = 'scroll'
         }
       }, [display])
+
     useEffect(()=>{
         if(isResetForm){
             setIsResetForm(false)

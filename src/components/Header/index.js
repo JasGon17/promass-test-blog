@@ -17,10 +17,13 @@ export const Header = () =>{
     }
     
     return(
-        <header className={styles.Header__Container}>
-            <Logo/>
-            <ButtonNewEntry handleAddEntry={handleAddEntry}/>
+        <div>
             <AddEntryModal display={isModalAddEntry} handleCloseModal={handleAddEntry}/>
-        </header>
+            <header className={styles.Header__Container}>
+                <Logo/>
+                <ButtonNewEntry handleAddEntry={handleAddEntry}/>
+            </header>
+        </div>
+
     )
 }
