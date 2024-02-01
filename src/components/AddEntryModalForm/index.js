@@ -1,15 +1,22 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import styles from './AddEntryModalForm.module.css'
 import { AddEntrySchema } from '@/utils/AddEntrySchema'
 
-export const AddEntryModalForm = () =>{
+export const AddEntryModalForm = ({isResetForm}) => {
     const { register, reset, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(AddEntrySchema),
         mode: 'onChange',
         criteriaMode: 'all'
       })
+
+    useEffect(() => {
+        if(isResetForm){
+            reset()
+        }
+    },[isResetForm])
     
     const  dateEntry = new Date();
     const day = dateEntry.getDate();
@@ -22,9 +29,11 @@ export const AddEntryModalForm = () =>{
     const registerAuthor = register('author')
     const registerContent = register('content')
 
-      const onSubmit = (data) => {
+    
+
+    const onSubmit = (data) => {
         console.log(data)
-      }
+    }
     return(
         <form 
         className={styles.AddEntryModalForm__Container}
