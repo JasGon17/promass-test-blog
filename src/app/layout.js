@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <div className={styles.Page__Children}>
         {children}
         </div>
+        <Footer/>
       </body>
     </html>
   );

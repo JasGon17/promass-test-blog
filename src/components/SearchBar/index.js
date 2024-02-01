@@ -16,7 +16,7 @@ export const SearchBar = ({dataBlogs, handleListBlog}) =>{
     const registerTypeSearch = register('typeSearch')
     const registernameSearch = register('nameSearch')
 
-    const handleRefresh = () =>{
+    const handleRefresh = () => {
         reset()       
         handleListBlog(dataBlogs)
     }
