@@ -1,9 +1,11 @@
 .Presentation__Container{
+    position: relative;
     width: 100%;
-    min-height: auto;
+    height: auto;
     display: flex;
     align-items: center;
-    padding-top: 32px;
+    padding: 32px 0px;
+    overflow: hidden;
 }
 .Presentation__ContImage{
     position: absolute;
@@ -12,8 +14,8 @@
 .Presentation__Image{
     object-fit: cover;
     opacity: .4;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 .Presentation__TextCont{
     display: flex;
@@ -40,6 +42,8 @@
     }
     .Presentation__Image{
         opacity: 1;
+        width: auto;
+        height: 100%;
     }
     .Presentation__TextCont{
         padding: 0px 32px;

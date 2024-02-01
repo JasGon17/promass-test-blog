@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
     padding: 0px 16px;
+    margin-top: 0px;
 }
 .Blogs__TitleCont{
     display: flex;
@@ -34,12 +35,18 @@
     color: var(--color-primary);
 }
 @media only screen and (min-width: 768px){
+    .Blogs__Container{
+        margin-top: 32px;
+    }
     .Blogs__CardBlogContainer{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
 @media only screen and (min-width: 1024px){
+    .Blogs__Container{
+        margin-top: 0px;
+    }
     .Blogs__CardBlogContainer{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
