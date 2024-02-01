@@ -22,8 +22,12 @@ export const SearchBar = ({dataBlogs, handleListBlog}) =>{
     }
 
     const onSubmit = ({typeSearch, nameSearch}) =>{
-        const listBlog = dataBlogs?.filter(item => item[typeSearch].includes(nameSearch))
-        handleListBlog(listBlog)
+        const lowerCaseNameSearch = nameSearch.toLowerCase()
+        const listBlog = dataBlogs?.filter(item => {
+        const lowerCaseItemValue = item[typeSearch].toLowerCase()
+        return lowerCaseItemValue.includes(lowerCaseNameSearch)
+    });
+    handleListBlog(listBlog);
     }
     
     return(
