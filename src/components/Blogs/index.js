@@ -4,35 +4,8 @@ import { CardBlog } from '../CardBlog'
 import { SearchBar } from '../SearchBar'
 import styles from './Blogs.module.css'
 
-const dataBlogs = [
-    {
-        title: 'como volar',
-        author: 'Jacinto',
-        date:'12-02-2023',
-        content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem qui sapiente, quam ut quae commodi cum repudiandae sequi sunt quibusdam, ratione, facilis iusto aliquam libero at repellat nam et nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque at eligendi voluptas nam rerum voluptatum! Ipsa nobis tempore natus, cumque illo unde deserunt nostrum ut, sunt animi numquam quaerat repudiandae.'
-    },
-    {
-        title: 'como ser dnsmshttl',
-        author: 'Jacinto',
-        date:'12-02-2023',
-        content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem qui sapiente, quam ut quae commodi cum repudiandae sequi sunt quibusdam, ratione, facilis iusto aliquam libero at repellat nam et nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque at eligendi voluptas nam rerum voluptatum! Ipsa nobis tempore natus, cumque illo unde deserunt nostrum ut, sunt animi numquam quaerat repudiandae.'
-    },
-    {
-        title: 'como ser baggy',
-        author: 'desconocido',
-        date:'12-02-2023',
-        content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem qui sapiente, quam ut quae commodi cum repudiandae sequi sunt quibusdam, ratione, facilis iusto aliquam libero at repellat nam et nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque at eligendi voluptas nam rerum voluptatum! Ipsa nobis tempore natus, cumque illo unde deserunt nostrum ut, sunt animi numquam quaerat repudiandae.'
-    },
-    {
-        title: '100 razones para ir al gym',
-        author: 'rq',
-        date:'12-02-2023',
-        content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem qui sapiente, quam ut quae commodi cum repudiandae sequi sunt quibusdam, ratione, facilis iusto aliquam libero at repellat nam et nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque at eligendi voluptas nam rerum voluptatum! Ipsa nobis tempore natus, cumque illo unde deserunt nostrum ut, sunt animi numquam quaerat repudiandae.'
-    },
-]
-
-export const Blogs = () =>{
-    const [dataBlog, setDataBlog] = useState(dataBlogs)
+export const Blogs = ({data}) =>{
+    const [dataBlog, setDataBlog] = useState(data)
 
     const handleListBlog = (data) => {
         setDataBlog(data)
@@ -44,7 +17,7 @@ export const Blogs = () =>{
                 <h2 className={styles.Blogs__Title}>
                     Mis Artículos
                 </h2>
-                <SearchBar dataBlogs={dataBlogs} handleListBlog={handleListBlog}/>
+                <SearchBar dataBlogs={data} handleListBlog={handleListBlog}/>
             </div>
             {dataBlog.length > 0 ?
                 <div className={styles.Blogs__CardBlogContainer}>
@@ -53,7 +26,7 @@ export const Blogs = () =>{
                         title={item.title}
                         author={item.author}
                         content={item.content}
-                        date={item.date}
+                        date={item.created_at}
                         key={key}
                         />
                     })}

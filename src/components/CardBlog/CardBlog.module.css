@@ -1,8 +1,9 @@
 .CardBlog__Container{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     width: 100%;
-    height: 207px;
+    height: 250px;
     border: solid 4px var(--color-secondary);
     border-radius: 16px;
     padding: 16px;
@@ -11,6 +12,7 @@
 .CardBlog__ContainerOn{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     width: 100%;
     height: auto;
     border: solid 4px var(--color-secondary);

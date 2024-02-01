@@ -6,6 +6,15 @@ import PropTypes from 'prop-types'
 export const CardBlog = ({title, author, content, date}) =>{
     const [isMore, setIsMore] = useState(false)
 
+    const newDate = new Date(date)
+    const year = newDate.getFullYear();
+    const month = newDate.getMonth() + 1;
+    const day = newDate.getDate();
+    const newMonth = month < 10 ? '0' + month : month
+    const formatedDate = `${day.toString().padStart(2, '0')}-${month.toString().padStart(2, '0')}-${year}`
+
+
+
     const [newContent, setNewContent] = useState(content.substring(0, 70) + '...')
 
     useEffect(()=>{
@@ -31,7 +40,7 @@ export const CardBlog = ({title, author, content, date}) =>{
                     {title}
                 </h3>
                 <p className={styles.CardBlog__Date}>
-                    {date}
+                    {formatedDate}
                 </p>
             </div>
             <p className={styles.CardBlog__Content}>
@@ -50,5 +59,5 @@ CardBlog.propTypes={
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired
+    date: PropTypes.number.isRequired
 }

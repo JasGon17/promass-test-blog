@@ -14,6 +14,9 @@
 .AddEntryModal__ContainerOff{
     display: none;
 }
+.AddEntryModal__FormOff{
+    display: none;
+}
 .AddEntryModal__Form{
     position: relative;
     border-radius: 16px;
