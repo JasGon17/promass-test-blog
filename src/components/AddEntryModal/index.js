@@ -8,7 +8,7 @@ import { Loader } from '../Loader'
 import { postBlog } from '@/services/blogServices'
 import { CardModal } from '../CardModal'
 
-export const AddEntryModal = ({ display, handleCloseModal }) => {
+export const AddEntryModal = ({ display, handleCloseModal, handleRefreshPage }) => {
   const [isResetForm, setIsResetForm] = useState(false)
 
   const [displayLoader, setDisplayLoader] = useState(false)
@@ -37,18 +37,18 @@ export const AddEntryModal = ({ display, handleCloseModal }) => {
 
   const handleModal = () => {
     setDisplayModal(false)
+    handleCloseModal()
+    handleRefreshPage()
   }
 
   const handleFormPost = async (data) => {
     setDisplayLoader(true)
     const response = await postBlog(data)
     if (response === 200) {
-      console.log('peticion realizada con exito')
       setDisplayLoader(false)
       setDisplayModal(true)
       setMessageModal('succes')
     } else {
-      console.log('peticion realizada sin exito')
       setDisplayLoader(false)
       setDisplayModal(true)
       setMessageModal('error')
@@ -76,5 +76,6 @@ export const AddEntryModal = ({ display, handleCloseModal }) => {
 }
 AddEntryModal.propTypes = {
   display: PropTypes.bool.isRequired,
-  handleCloseModal: PropTypes.func
+  handleCloseModal: PropTypes.func,
+  handleRefreshPage: PropTypes.func
 }
