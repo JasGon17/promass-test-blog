@@ -9,9 +9,9 @@ export const Presentation = () => {
                 <Image className={styles.Presentation__Image} src='./static/blog-img.svg' width={2000} height={2000} alt={'blog-img'}/>
             </div>
             <div className={styles.Presentation__TextCont}>
-                    <p className={styles.Presentation__Text}>
+                    <h1 className={styles.Presentation__Text}>
                     ¡Bienvenidos al universo de <span className={styles.Presentation__TextTitle}>MiBlog</span>!
-                    </p>
+                    </h1>
                     <p className={styles.Presentation__Text}>
                     En este espacio virtual, exploraremos un sinfín de ideas, reflexiones y descubrimientos que nos invitan a expandir nuestras mentes y corazones. En cada entrada, nos sumergiremos en temas fascinantes que abarcan desde la ciencia y la tecnología hasta la filosofía y el arte.
                     </p>
