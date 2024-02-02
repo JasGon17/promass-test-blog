@@ -27,10 +27,13 @@ export const Header = () => {
   const handleModal = () => {
     setDisplayModal(false)
   }
+  const handleRefreshPage = () => {
+    window.location.reload()
+  }
 
   return (
         <div>
-            <AddEntryModal display={isModalAddEntry} handleCloseModal={handleAddEntry}/>
+            <AddEntryModal display={isModalAddEntry} handleCloseModal={handleAddEntry} handleRefreshPage={handleRefreshPage}/>
             <ModalConectionService displayModal={displayModal} handleModal={handleModal} messageModal={messageModal}/>
             <header className={styles.Header__Container}>
                 <Logo/>

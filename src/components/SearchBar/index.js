@@ -80,6 +80,7 @@ export const SearchBar = ({ dataBlogs, handleListBlog }) => {
                         <button
                         className={styles.SearchBar__ResetButton}
                         type='button'
+                        aria-label="Refresh"
                         onClick={() => { handleRefresh() }}>
                             <LuRefreshCw/>
                         </button>
